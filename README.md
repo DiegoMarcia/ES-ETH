@@ -92,9 +92,9 @@ The read and write operations on `<TOP>` are due to the use of dynamic arrays by
 The last line is due to unretrieved addresses for contracts object of `CALL` operations.
 
 ## Shortcomings
-- As stated before, results retrieved from Etherscan gets saved in a temporary file, but not re-used for following executions. This is annoying.
+- As stated before, results retrieved from Etherscan get saved in a temporary file, but not re-used for following executions. This is annoying.
 - No _Gas_ consumption is taken into account. Therefore, no _Out-of-Gas_ exceptions are detected;
-  - Not decrementing Gas means need cycle detection is needed: **ES-ETH** follows a quite naive approach, interrupting the current execution path as soon as a loop is detected. This leads to the missing of various accesses to Storage.
+  - Not decrementing Gas means cycle detection is needed: **ES-ETH** follows a quite naive approach, interrupting the current execution path as soon as a loop is detected. This leads to the missing of various accesses to Storage.
 - Several instructions are not implemented, their execution is simulated by a symbol being put on stack:
   - SHA3 (the most needed by far, used by dictionaries and dynamic-size arrays)
   - EXTCODESIZE
