@@ -1,8 +1,8 @@
 # ES-ETH
-ES-ETH (from the Italian _**E**secuzione **S**imbolica di contratti **ETH**ereum_, id est _Symbolic Execution of Ethereum contracts_) is MSc thesis project. Its main aim is to perform code analysis on smart contracts involved in an arbitrary Ethereum transaction, in order to determine the sets of read and written _Storage_ locations as well as account balances.
+ES-ETH (from the Italian _**E**secuzione **S**imbolica di contratti **ETH**ereum_, id est _Symbolic Execution of Ethereum contracts_) is my MSc thesis project. Its main aim is to perform code analysis on smart contracts involved in an arbitrary Ethereum transaction, in order to determine the sets of read and written _Storage_ locations as well as account balances.
 
 ## General approach
-The original idea was to perform a static analysis of the contract's bytecode, but as the tool's name suggests, it rapidly became clear that some sort of code interpreting was needed to achieve the main goal. As an obvious example of the ostacles against purely static analysis, one could think about the bytecode being based on an operand stack rather than expressions, wich requires reconstructing stack transformations around each Storage operation _at least_.  
+The original idea was to perform a static analysis of the contract's bytecode, but as the tool's name suggests, it rapidly became clear that some sort of code interpreting was needed to achieve the main goal. As an obvious example of the obstacles against purely static analysis, one could think about the bytecode being based on an operand stack rather than expressions, wich requires reconstructing stack transformations around each Storage operation _at least_.  
 Therefore, **ES-ETH** carries a lazy execution of the bytecode, borrowing from typical symbolic execution techniques.
 
 ## Followed refs
