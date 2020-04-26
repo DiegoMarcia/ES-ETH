@@ -87,8 +87,8 @@ The output for executing on transaction `0xc4feabe0ef273efd68da8f3b00e65c4f3081a
     (0x7d56485e026d5d3881f778e99969d2b1f90c50af, <BALANCE>, w)
     (<TOP>, <BALANCE>, w)
 
-Location `0x6` is shared by three Solidity varibles packed together in a single 32-byte slot. The tool can't currently distinguish between them.
-The read and write operations on <TOP> are due to the use of dynamic arrays by the contract. Such data structures currently lead to some problems for the tool.  
+Location `0x6` is shared by three Solidity varibles packed together in a single 32-byte slot. The tool can't currently distinguish between them.  
+The read and write operations on `<TOP>` are due to the use of dynamic arrays by the contract. Such data structures currently lead to some problems for the tool.  
 The last line is due to unretrieved addresses for contracts object of `CALL` operations.
 
 ## Shortcomings
